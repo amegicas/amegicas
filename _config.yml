@@ -1,7 +1,8 @@
-title: "Il Mio Sito Ispirato a Figure AI"
+
 author: Vincenzo
-description: Amegicas è hostato in GitHub e si avvale della tecnologia Jekyll!
-description: "Un tema Jekyll moderno e minimalista"
-theme: null
-exclude: ["README.md", "Gemfile", "Gemfile.lock"]
+title: "La Tua Azienda"
+description: "Diffusione del Vangelo attraverso la tecnologia mobile."
+baseurl: "" # Cambia se ospitato in una sottocartella
+url: "https://amegicas.com" # Cambia con il tuo dominio
+permalink: pretty
 
