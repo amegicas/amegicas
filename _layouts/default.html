@@ -1,144 +1,16 @@
----
-layout: default
-title: Home
----
-
-<header class="hero">
-  <div class="container">
-    <h1>Innovazione e Tecnologia</h1>
-    <p>Un tema Jekyll ispirato a Figure AI</p>
-    <a href="#about" class="btn">Scopri di più</a>
-  </div>
-</header>
-
-<section id="about" class="about">
-  <div class="container">
-    <h2>Su di Noi</h2>
-    <p>Un design minimalista e tecnologico per il tuo sito web.</p>
-  </div>
-</section>
-
-<section id="features" class="features">
-  <div class="container">
-    <h2>Caratteristiche</h2>
-    <div class="grid">
-      <div class="feature-box">
-        <h3>🌑 Dark Mode</h3>
-        <p>Design elegante con sfondo scuro per un look professionale.</p>
-      </div>
-      <div class="feature-box">
-        <h3>📱 Responsive</h3>
-        <p>Perfettamente adattabile su mobile, tablet e desktop.</p>
-      </div>
-      <div class="feature-box">
-        <h3>🎞️ Video Support</h3>
-        <p>Incorpora facilmente video dimostrativi e contenuti multimediali.</p>
-      </div>
-      <div class="feature-box">
-        <h3>⚡ Animazioni Leggere</h3>
-        <p>Effetti di transizione fluidi per una navigazione moderna.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="blog" class="blog">
-  <div class="container">
-    <h2>Ultime Novità</h2>
-    <ul>
-      {% for post in site.posts %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="container">
-    <h2>Contattaci</h2>
-    <p>Se hai domande, scrivici!</p>
-    <form action="#">
-      <input type="text" name="name" placeholder="Nome">
-      <input type="email" name="email" placeholder="Email">
-      <textarea name="message" placeholder="Messaggio"></textarea>
-      <button type="submit">Invia</button>
-    </form>
-  </div>
-</section>
-
-<style>
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #0a0a0a;
-  color: white;
-  margin: 0;
-  padding: 0;
-}
-.container {
-  width: 80%;
-  margin: auto;
-  padding: 20px;
-}
-.hero {
-  background: linear-gradient(to right, #000, #222);
-  text-align: center;
-  padding: 120px 0;
-  animation: fadeIn 1.5s ease-in-out;
-}
-.hero h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-}
-.btn {
-  background: #00ffcc;
-  color: #000;
-  padding: 12px 25px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-.btn:hover {
-  background: #008f7a;
-}
-.about, .features, .blog, .contact {
-  padding: 60px 0;
-  text-align: center;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-.feature-box {
-  background: #1a1a1a;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 255, 204, 0.2);
-}
-.contact form input, .contact form textarea {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-}
-.contact form button {
-  background: #00ffcc;
-  color: #000;
-  padding: 12px 25px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-}
-.contact form button:hover {
-  background: #008f7a;
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-</style>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+    {% include navbar.html %}
+    <main>
+        {{ content }}
+    </main>
+    {% include footer.html %}
+</body>
+</html>
