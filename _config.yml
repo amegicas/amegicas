@@ -1,5 +1,7 @@
-remote_theme: andrewbanchich/forty-jekyll-theme
-title: Amegicas
+title: "Il Mio Sito Ispirato a Figure AI"
 author: Vincenzo
 description: Amegicas è hostato in GitHub e si avvale della tecnologia Jekyll!
+description: "Un tema Jekyll moderno e minimalista"
+theme: null
+exclude: ["README.md", "Gemfile", "Gemfile.lock"]
 
